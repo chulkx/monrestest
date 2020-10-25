@@ -26,7 +26,7 @@ class Ui_MainWindow(object):
         self.drop_shadow_layout.setContentsMargins(10, 10, 10, 10)
         self.drop_shadow_frame = QFrame(self.centralwidget)
         self.drop_shadow_frame.setObjectName(u"drop_shadow_frame")
-        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.328804 rgba(75, 67, 132, 100), stop:0.644022 rgba(43, 39, 90, 100));\n"
+        self.drop_shadow_frame.setStyleSheet(u"background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.328804 rgba(75, 67, 132, 150), stop:0.644022 rgba(43, 39, 90, 150));\n"
 "border-radius: 10px")
         self.drop_shadow_frame.setFrameShape(QFrame.NoFrame)
         self.drop_shadow_frame.setFrameShadow(QFrame.Raised)

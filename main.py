@@ -22,6 +22,7 @@ class MainWindow(QMainWindow):
         self.ui.setupUi(self)
 
         self.ui.label_3 = self.cpuBrand()
+        self.ui.label_11 = self.totalRam()
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.refresh)
 
@@ -76,6 +77,14 @@ class MainWindow(QMainWindow):
         proc = get_cpu_info()
         cB = proc["brand_raw"]
         self.ui.label_3.setText(cB)
+        hz = proc["hz_actual_friendly"]
+        self.ui.label_4.setText(hz)
+
+    def totalRam(self):
+        r = psutil.virtual_memory()
+        ram = f"{(r[0]/(1023**3)):.2f}"
+        self.ui.label_11.setText(str(ram)+"GB")
+        print(r)
 
 # 'brand_raw': 'AMD Ryzen 5 1600 Six-Core Processor'
 # 'hz_actual_friendly': '3.2000 GHz'

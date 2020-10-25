@@ -6,6 +6,7 @@ from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFo
 from PySide2.QtWidgets import *
 import psutil
 from cpuinfo import get_cpu_info
+import wmi
 
 
 #gui fike
@@ -15,14 +16,21 @@ from ui_main import Ui_MainWindow
 from ui_functions import *
 
 counter = 0
+
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
 
+
+        self.computer = wmi.WMI()
+        self.proc = get_cpu_info()
+        
+
         self.ui.label_3 = self.cpuBrand()
         self.ui.label_11 = self.totalRam()
+        self.ui.label_7 = self.gpuBrand()
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.refresh)
 
@@ -74,13 +82,24 @@ class MainWindow(QMainWindow):
 
 
     def cpuBrand(self):
-        proc = get_cpu_info()
-        cB = proc["brand_raw"]
+        
+        cB = self.proc["brand_raw"]
         self.ui.label_3.setText(cB)
-        hz = proc["hz_actual_friendly"]
+        hz = self.proc["hz_actual_friendly"]
         self.ui.label_4.setText(hz)
 
+    def gpuBrand(self):
+        
+        gpu = self.computer.Win32_VideoController()[0]
+        gpu_name = gpu.VideoProcessor
+        self.ui.label_7.setText(gpu_name)
+
+
     def totalRam(self):
+
+        ramHz = self.computer.Win32_PhysicalMemory()[0]
+        ramHzShow = ramHz.Speed
+        self.ui.label_12.setText(str(ramHzShow)+"MHz")
         r = psutil.virtual_memory()
         ram = f"{(r[0]/(1023**3)):.2f}"
         self.ui.label_11.setText(str(ram)+"GB")

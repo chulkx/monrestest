@@ -1,0 +1,872 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1077</width>
+    <height>676</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="drop_shadow_layout">
+    <property name="spacing">
+     <number>0</number>
+    </property>
+    <property name="leftMargin">
+     <number>10</number>
+    </property>
+    <property name="topMargin">
+     <number>10</number>
+    </property>
+    <property name="rightMargin">
+     <number>10</number>
+    </property>
+    <property name="bottomMargin">
+     <number>10</number>
+    </property>
+    <item>
+     <widget class="QFrame" name="drop_shadow_frame">
+      <property name="styleSheet">
+       <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:1, stop:0.328804 rgba(75, 67, 132, 255), stop:0.644022 rgba(43, 39, 90, 255));
+border-radius: 10px</string>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::NoFrame</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item alignment="Qt::AlignVCenter">
+        <widget class="QFrame" name="title_bar">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>50</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: none</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_title">
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_2">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item alignment="Qt::AlignVCenter">
+              <widget class="QLabel" name="label_title">
+               <property name="minimumSize">
+                <size>
+                 <width>0</width>
+                 <height>50</height>
+                </size>
+               </property>
+               <property name="font">
+                <font>
+                 <family>Microsoft Tai Le</family>
+                 <pointsize>20</pointsize>
+                 <weight>75</weight>
+                 <bold>true</bold>
+                </font>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">color: rgb(85, 170, 255);</string>
+               </property>
+               <property name="text">
+                <string>Hard monitor test</string>
+               </property>
+               <property name="alignment">
+                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item alignment="Qt::AlignVCenter">
+           <widget class="QFrame" name="frame_btns">
+            <property name="maximumSize">
+             <size>
+              <width>100</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::NoFrame</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <widget class="QPushButton" name="btn_maximize">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>17</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+border: none;
+border-radius: 8px;
+background-color: rgb(85, 255, 255);
+}
+QPushButton:hover{
+background-color: rgba(85, 255, 255, 150);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="btn_minimize">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>17</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+border: none;
+border-radius: 8px;
+	background-color: rgb(255, 170, 0);
+}
+QPushButton:hover{
+	background-color: rgba(255, 170, 0, 150);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+             <item alignment="Qt::AlignBottom">
+              <widget class="QPushButton" name="btn_close">
+               <property name="minimumSize">
+                <size>
+                 <width>16</width>
+                 <height>16</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>17</width>
+                 <height>17</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">QPushButton {
+border: none;
+border-radius: 8px;
+	background-color: rgb(255, 0, 0);
+}
+QPushButton:hover{
+	background-color: rgba(255, 0, 0, 150);
+}</string>
+               </property>
+               <property name="text">
+                <string/>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="content_bar">
+         <property name="styleSheet">
+          <string notr="true">background-color: none</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QStackedWidget" name="stackedWidget">
+            <property name="styleSheet">
+             <string notr="true">backgroundcolor: none;</string>
+            </property>
+            <widget class="QWidget" name="page_home">
+             <layout class="QVBoxLayout" name="verticalLayout_3">
+              <item>
+               <widget class="QFrame" name="frame_content_home">
+                <property name="frameShape">
+                 <enum>QFrame::StyledPanel</enum>
+                </property>
+                <property name="frameShadow">
+                 <enum>QFrame::Raised</enum>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_4">
+                 <item>
+                  <widget class="QFrame" name="frame_infos">
+                   <property name="frameShape">
+                    <enum>QFrame::NoFrame</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_6">
+                    <item>
+                     <widget class="QFrame" name="frame_circle_1">
+                      <property name="minimumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+border: 7px solid rgb(53, 158, 158);
+border-radius:125px;
+
+}
+QFrame:hover {
+border: 7px solid rgb(49, 130, 130);
+}
+</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::NoFrame</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_5">
+                       <property name="leftMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>30</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>30</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                           <pointsize>17</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>CPU usage</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_2">
+                         <property name="font">
+                          <font>
+                           <family>OCR A Extended</family>
+                           <pointsize>60</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                           <underline>false</underline>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(171, 171, 171);</string>
+                         </property>
+                         <property name="text">
+                          <string>35%</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_3">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI Semilight</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>Brand | Model | Cores</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_4">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>CPU Temp</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_circle_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+border: 7px solid rgb(53, 158, 158);
+border-radius:125px;
+
+}
+QFrame:hover {
+border: 7px solid rgb(49, 130, 130);
+}
+</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::NoFrame</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_6">
+                       <property name="leftMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>30</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>30</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_5">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                           <pointsize>17</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>GPU usage</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_6">
+                         <property name="font">
+                          <font>
+                           <family>OCR A Extended</family>
+                           <pointsize>60</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                           <underline>false</underline>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(171, 171, 171);</string>
+                         </property>
+                         <property name="text">
+                          <string>35%</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_7">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI Semilight</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>Brand | Model </string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_8">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>GPU Temp</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="frame_circle_3">
+                      <property name="minimumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>250</width>
+                        <height>250</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame{
+border: 7px solid rgb(53, 158, 158);
+border-radius:125px;
+
+}
+QFrame:hover {
+border: 7px solid rgb(49, 130, 130);
+}
+</string>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::NoFrame</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QVBoxLayout" name="verticalLayout_7">
+                       <property name="leftMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>30</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>20</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>30</number>
+                       </property>
+                       <item>
+                        <widget class="QLabel" name="label_9">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                           <pointsize>17</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>RSM usage</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_10">
+                         <property name="font">
+                          <font>
+                           <family>OCR A Extended</family>
+                           <pointsize>60</pointsize>
+                           <weight>50</weight>
+                           <italic>false</italic>
+                           <bold>false</bold>
+                           <underline>false</underline>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(171, 171, 171);</string>
+                         </property>
+                         <property name="text">
+                          <string>4GB</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_11">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI Semilight</family>
+                           <pointsize>10</pointsize>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>Total Ram</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLabel" name="label_12">
+                         <property name="font">
+                          <font>
+                           <family>Nirmala UI</family>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border:none;
+color: rgb(53, 158, 158);</string>
+                         </property>
+                         <property name="text">
+                          <string>clock or MB temp</string>
+                         </property>
+                         <property name="alignment">
+                          <set>Qt::AlignCenter</set>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame_texts">
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>100</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_7">
+                    <item>
+                     <widget class="QLabel" name="label_13">
+                      <property name="maximumSize">
+                       <size>
+                        <width>400</width>
+                        <height>50</height>
+                       </size>
+                      </property>
+                      <property name="font">
+                       <font>
+                        <family>Nirmala UI</family>
+                        <pointsize>13</pointsize>
+                        <weight>50</weight>
+                        <italic>false</italic>
+                        <bold>false</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QFrame {
+border-radius:10px;
+	background-color: rgba(94, 86, 200, 110);
+	
+	color: rgb(177, 177, 177);
+}</string>
+                      </property>
+                      <property name="text">
+                       <string>&quot;Keep learning and applying your knowledge&quot;</string>
+                      </property>
+                      <property name="alignment">
+                       <set>Qt::AlignCenter</set>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="page_credits">
+             <widget class="QFrame" name="frame_content_credits">
+              <property name="geometry">
+               <rect>
+                <x>340</x>
+                <y>230</y>
+                <width>120</width>
+                <height>80</height>
+               </rect>
+              </property>
+              <property name="frameShape">
+               <enum>QFrame::StyledPanel</enum>
+              </property>
+              <property name="frameShadow">
+               <enum>QFrame::Raised</enum>
+              </property>
+             </widget>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QFrame" name="credits_bar">
+         <property name="maximumSize">
+          <size>
+           <width>16777215</width>
+           <height>30</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: none</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_4">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="frame_label_credits">
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>15</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QLabel" name="label_credits">
+               <property name="styleSheet">
+                <string notr="true">color: rgb(92, 152, 152);</string>
+               </property>
+               <property name="text">
+                <string>By: chulkx</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QFrame" name="frame_grip">
+            <property name="minimumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>30</width>
+              <height>30</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">padding: 5px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

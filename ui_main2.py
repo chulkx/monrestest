@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ui_maintnykJl.ui'
+## Form generated from reading UI file 'ui_mainmKxSgq.ui'
 ##
 ## Created by: Qt User Interface Compiler version 5.15.1
 ##
@@ -186,22 +186,15 @@ class Ui_MainWindow(object):
         self.label_2 = QLabel(self.frame_circle_1)
         self.label_2.setObjectName(u"label_2")
         font2 = QFont()
-        font2.setFamily(u"Nirmala UI")
-        font2.setPointSize(40)
+        font2.setFamily(u"Nirmala UI Semilight")
+        font2.setPointSize(50)
         font2.setBold(False)
         font2.setItalic(False)
         font2.setUnderline(False)
         font2.setWeight(50)
-        # font21 = QFont()
-        # font21.setFamily(u"Nirmala UI")
-        # font21.setPointSize(50)
-        # font21.setBold(False)
-        # font21.setItalic(False)
-        # font21.setUnderline(False)
-        # font21.setWeight(50)
         self.label_2.setFont(font2)
         self.label_2.setStyleSheet(u"border:none;\n"
-                "color: rgb(171, 171, 171);")
+"color: rgb(171, 171, 171);")
         self.label_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_5.addWidget(self.label_2)
@@ -275,7 +268,7 @@ class Ui_MainWindow(object):
         self.label_7.setStyleSheet(u"border:none;\n"
 "color: rgb(53, 158, 158);")
         self.label_7.setAlignment(Qt.AlignCenter)
-        self.label_7.setWordWrap(True)
+
         self.verticalLayout_6.addWidget(self.label_7)
 
         self.label_8 = QLabel(self.frame_circle_2)
@@ -353,10 +346,29 @@ class Ui_MainWindow(object):
         self.frame_texts = QFrame(self.frame_content_home)
         self.frame_texts.setObjectName(u"frame_texts")
         self.frame_texts.setMaximumSize(QSize(16777215, 100))
-        self.frame_texts.setFrameShape(QFrame.StyledPanel)
+        self.frame_texts.setFrameShape(QFrame.NoFrame)
         self.frame_texts.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_7 = QHBoxLayout(self.frame_texts)
-        self.horizontalLayout_7.setObjectName(u"horizontalLayout_7")
+        self.gridLayout = QGridLayout(self.frame_texts)
+        self.gridLayout.setObjectName(u"gridLayout")
+        self.label_14 = QLabel(self.frame_texts)
+        self.label_14.setObjectName(u"label_14")
+        self.label_14.setMaximumSize(QSize(400, 50))
+        font5 = QFont()
+        font5.setFamily(u"Nirmala UI")
+        font5.setPointSize(12)
+        font5.setBold(False)
+        font5.setWeight(75)
+        self.label_14.setFont(font5)
+        self.label_14.setStyleSheet(u"QFrame {\n"
+"border-radius:10px;\n"
+"	background-color: rgba(94, 86, 200, 110);\n"
+"	\n"
+"	color: rgb(177, 177, 177);\n"
+"}")
+        self.label_14.setAlignment(Qt.AlignCenter)
+
+        self.gridLayout.addWidget(self.label_14, 0, 0, 1, 1)
+
         self.label_13 = QLabel(self.frame_texts)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setMaximumSize(QSize(400, 50))
@@ -375,7 +387,7 @@ class Ui_MainWindow(object):
 "}")
         self.label_13.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_7.addWidget(self.label_13)
+        self.gridLayout.addWidget(self.label_13, 1, 0, 1, 1)
 
 
         self.verticalLayout_4.addWidget(self.frame_texts)
@@ -469,6 +481,7 @@ class Ui_MainWindow(object):
         self.label_10.setText(QCoreApplication.translate("MainWindow", u"4GB", None))
         self.label_11.setText(QCoreApplication.translate("MainWindow", u"Total Ram", None))
         self.label_12.setText(QCoreApplication.translate("MainWindow", u"clock or MB temp", None))
+        self.label_14.setText(QCoreApplication.translate("MainWindow", u"Motherboard", None))
         self.label_13.setText(QCoreApplication.translate("MainWindow", u"\"Keep learning and applying your knowledge\"", None))
         self.label_credits.setText(QCoreApplication.translate("MainWindow", u"By: chulkx", None))
     # retranslateUi

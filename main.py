@@ -10,7 +10,7 @@ import wmi
 
 
 #gui fike
-from ui_main import Ui_MainWindow
+from ui_main2 import Ui_MainWindow
 
 #import functions
 from ui_functions import *
@@ -31,6 +31,7 @@ class MainWindow(QMainWindow):
         self.ui.label_3 = self.cpuBrand()
         self.ui.label_11 = self.totalRam()
         self.ui.label_7 = self.gpuBrand()
+        self.ui.label_14 = self.mother()
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.refresh)
 
@@ -93,6 +94,12 @@ class MainWindow(QMainWindow):
         gpu = self.computer.Win32_VideoController()[0]
         gpu_name = gpu.VideoProcessor
         self.ui.label_7.setText(gpu_name)
+
+    def mother(self):
+        mb = self.computer.Win32_BaseBoard()[0]
+        mbName = mb.Name
+        mbModel = mb.Product
+        self.ui.label_14.setText(mbName + ":  " + mbModel)
 
 
     def totalRam(self):

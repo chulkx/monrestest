@@ -7,6 +7,7 @@ from PySide2.QtWidgets import *
 import psutil
 from cpuinfo import get_cpu_info
 import wmi
+import GPUtil
 
 
 #gui fike
@@ -32,6 +33,8 @@ class MainWindow(QMainWindow):
         self.ui.label_11 = self.totalRam()
         self.ui.label_7 = self.gpuBrand()
         self.ui.label_14 = self.mother()
+
+
         self.timer = QtCore.QTimer()
         self.timer.timeout.connect(self.refresh)
 
@@ -60,6 +63,14 @@ class MainWindow(QMainWindow):
 
         self.show()
 
+    # def back(self):
+    #     back = self.computer.Win32_Processor()[0]
+    #     bBrand = back.Manufacturer
+    #     if bBrand == "AuthenticAMD":
+
+
+
+        
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
     
@@ -73,8 +84,12 @@ class MainWindow(QMainWindow):
         # print(temp)
 
         #gpuRefresh
-        # value = psutil.gpu_percent()
-        self.ui.label_6.setText(str(value)+"%")    
+        gpu = GPUtil.getGPUs()
+        for gpuV in gpu:
+            value2 = f"{gpuV.load*100}"
+            value2T = gpuV.temperature
+        self.ui.label_6.setText(str(value2)+"%")
+        self.ui.label_8.setText(str(value2T)+"°C")    
         
         value3 = psutil.virtual_memory()
         value3a = f"{(value3[3]/(1024**3)):.1f}"
@@ -112,8 +127,6 @@ class MainWindow(QMainWindow):
         self.ui.label_11.setText(str(ram)+"GB")
         print(r)
 
-# 'brand_raw': 'AMD Ryzen 5 1600 Six-Core Processor'
-# 'hz_actual_friendly': '3.2000 GHz'
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

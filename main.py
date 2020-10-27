@@ -1,9 +1,11 @@
 import sys
 import platform
+
 from PySide2 import QtCore, QtGui, QtWidgets
 from PySide2.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide2.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide2.QtWidgets import *
+
 import psutil
 from cpuinfo import get_cpu_info
 import wmi
@@ -120,12 +122,12 @@ class MainWindow(QMainWindow):
     def totalRam(self):
 
         ramHz = self.computer.Win32_PhysicalMemory()[0]
-        ramHzShow = ramHz.Speed
-        self.ui.label_12.setText(str(ramHzShow)+"MHz")
+        ramHzS = ramHz.Speed
+        self.ui.label_12.setText(str(ramHzS)+"MHz")
         r = psutil.virtual_memory()
         ram = f"{(r[0]/(1023**3)):.2f}"
         self.ui.label_11.setText(str(ram)+"GB")
-        print(r)
+        
 
 
 if __name__ == "__main__":

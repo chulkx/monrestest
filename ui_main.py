@@ -136,7 +136,7 @@ class Ui_MainWindow(object):
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.stackedWidget = QStackedWidget(self.content_bar)
         self.stackedWidget.setObjectName(u"stackedWidget")
-        self.stackedWidget.setStyleSheet(u"backgroundcolor: none;")
+        self.stackedWidget.setStyleSheet(u"background-color: none;")
         self.page_home = QWidget()
         self.page_home.setObjectName(u"page_home")
         self.verticalLayout_3 = QVBoxLayout(self.page_home)
